@@ -1,23 +1,23 @@
 pipeline {
     agent any 
     stages {
-        stage ("code pull"){
+        stage ("pull"){
             steps {
-                echo "code pull successfully"
+              git branch:'main',url: 'https://github.com/prathamnandgirwar/on-cdec-b77-demo.git'
             }
         }
-        stage ("code build "){
+           stage ("build"){
             steps {
                 echo "code build successfully"
             }
         }
-        stage ("code test"){
+           stage ("test"){
             steps {
                 echo "code test successfully"
             }
         }
-        stage(" code deploy"){
-            steps{
+           stage ("deploy"){
+            steps {
                 echo "code deploy successfully"
             }
         }
