@@ -1,0 +1,21 @@
+pipeline {
+    agent any 
+    stages {
+        stage ("code pull") {
+            steps {
+                echo "code pull"
+            }
+        }
+        stage ("code build"){
+            steps {
+                echo "build"
+            }
+        }
+        stage("code test"){
+            steps {
+                echo "test"
+            }
+        }
+    }
+
+}
